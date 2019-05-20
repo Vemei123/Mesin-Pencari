@@ -55,8 +55,9 @@ public class Home extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setBackground(new java.awt.Color(204, 255, 255));
-        jTable1.setFont(new java.awt.Font("MingLiU", 0, 11)); // NOI18N
+        jTable1.setBackground(new java.awt.Color(0, 102, 102));
+        jTable1.setFont(new java.awt.Font("MingLiU", 1, 11)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -96,8 +97,9 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 80, -1));
 
-        jTextField1.setBackground(new java.awt.Color(204, 255, 255));
-        jTextField1.setFont(new java.awt.Font("MingLiU", 0, 11)); // NOI18N
+        jTextField1.setBackground(new java.awt.Color(0, 153, 153));
+        jTextField1.setFont(new java.awt.Font("MingLiU", 1, 11)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 250, -1));
 
         jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 40)); // NOI18N
@@ -110,7 +112,7 @@ public class Home extends javax.swing.JFrame {
         jLabel2.setText("Masukkan Kata");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 110, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Background.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/B7.jpg"))); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(800, 800));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 470));
 
@@ -130,6 +132,8 @@ public class Home extends javax.swing.JFrame {
             File dir = fc.getSelectedFile();
             Index.readDirectory(dir);
         }
+        TambahDokumen dialog = new TambahDokumen();
+        dialog.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -200,7 +204,7 @@ public class Home extends javax.swing.JFrame {
     }
     
     public void loadData() {
-        File dir = new File("C:\\Users\\admin\\Documents\\NetBeansProjects\\Search\\PETRUS");
+        File dir = new File("C:\\Users\\userr\\Documents\\NetBeansProjects\\Mesin-Pencari\\PETRUS");
         Index.readDirectory(dir);
 }
 }
