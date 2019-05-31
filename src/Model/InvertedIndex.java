@@ -5,7 +5,7 @@
  */
 package model;
 
-import com.sun.org.apache.xerces.internal.util.DOMUtil;
+//import com.sun.org.apache.xerces.internal.util.DOMUtil;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -302,7 +302,7 @@ public class InvertedIndex {
         for (int i = 0; i < posting.size(); i++) {
             result += Math.pow(posting.get(i).getWeight(), 2);
         }
-        return Math.sqrt(result);
+        return (result);
     }
 
     public double getCosineSimilarity(ArrayList<Posting> posting, ArrayList<Posting> posting1) {
@@ -321,8 +321,9 @@ public class InvertedIndex {
             double hasilDotProduct = getInnerProduct(tempDocWeight, queryPostingList);
             if (hasilDotProduct > 0) {
                 SearchingResult resultDoc = new SearchingResult(hasilDotProduct, doc);
-                result.add(resultDoc);
+               result.add(resultDoc);
             }
+            
         }
         Collections.sort(result);
         return result;

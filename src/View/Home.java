@@ -45,6 +45,7 @@ public class Home extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -97,6 +98,15 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 80, -1));
 
+        jButton5.setFont(new java.awt.Font("Leelawadee UI", 1, 11)); // NOI18N
+        jButton5.setText("Tambah Manual");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 130, 30));
+
         jTextField1.setBackground(new java.awt.Color(0, 153, 153));
         jTextField1.setFont(new java.awt.Font("MingLiU", 1, 11)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
@@ -113,8 +123,7 @@ public class Home extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 110, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/B7.jpg"))); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(800, 800));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 470));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,13 +141,17 @@ public class Home extends javax.swing.JFrame {
             File dir = fc.getSelectedFile();
             Index.readDirectory(dir);
         }
-        TambahDokumen dialog = new TambahDokumen();
-        dialog.setVisible(true);
+      
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       TambahDokumen dialog = new TambahDokumen();
+        dialog.setVisible(true);  
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,6 +193,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -204,7 +218,7 @@ public class Home extends javax.swing.JFrame {
     }
     
     public void loadData() {
-        File dir = new File("C:\\Users\\userr\\Documents\\NetBeansProjects\\Mesin-Pencari\\PETRUS");
+        File dir = new File("C:\\Users\\K\\Documents\\NetBeansProjects\\Mesin-Pencari\\PETRUS");
         Index.readDirectory(dir);
 }
 }
